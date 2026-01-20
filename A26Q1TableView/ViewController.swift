@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         theTableView.dataSource = self
         theTableView.delegate = self
+        
+        // 註冊 XIB Cell
+        let nib = UINib(nibName: "My2TableViewCell", bundle: nil)
+        theTableView.register(nib, forCellReuseIdentifier: "my2TableViewCell")
     }
 
 
@@ -24,7 +28,8 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath) as! MyTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "my2TableViewCell", for: indexPath) as! My2TableViewCell
+//        cell.cellLabel.text = "text for \(indexPath.row)"
         return cell
     }
     

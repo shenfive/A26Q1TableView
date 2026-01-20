@@ -1,5 +1,5 @@
 //
-//  MyTableViewCell.swift
+//  My2TableViewCell.swift
 //  A26Q1TableView
 //
 //  Created by Danny Shen on 2026/1/20.
@@ -7,9 +7,8 @@
 
 import UIKit
 
-class MyTableViewCell: UITableViewCell {
+class My2TableViewCell: UITableViewCell {
 
-    @IBOutlet weak var cellLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +17,7 @@ class MyTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
+        // Configure the view for the selected state
     }
-
+    
 }

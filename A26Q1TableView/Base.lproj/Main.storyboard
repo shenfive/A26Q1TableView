@@ -30,6 +30,13 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uO0-dC-PGX">
                                                     <rect key="frame" x="10" y="10" width="63" height="29"/>
                                                 </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTf-0P-vdE">
+                                                    <rect key="frame" x="46" y="59" width="252" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="uO0-dC-PGX" firstAttribute="top" secondItem="lIw-lQ-yKk" secondAttribute="top" constant="10" id="55c-Tr-AbV"/>
@@ -37,6 +44,9 @@
                                                 <constraint firstAttribute="bottom" secondItem="uO0-dC-PGX" secondAttribute="bottom" constant="100" id="kRL-6r-OC5"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellLabel" destination="rTf-0P-vdE" id="lco-3X-dR3"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
