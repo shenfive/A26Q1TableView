@@ -8,12 +8,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var theTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        theTableView.dataSource = self
+        theTableView.delegate = self
     }
 
 
+}
+extension ViewController:UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        
+        return cell
+    }
+    
+    
 }
 
